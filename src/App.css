@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.react-player-1{
+  position: absolute;
+}
+
+.react-player-2{
+  position: absolute;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +44,12 @@
     transform: rotate(360deg);
   }
 }
+/* homepage - animation and photo - title - links to linkedin and github */
+
+/* projects */
+
+/* about me */
+
+/* skills */
+
+/* footer - links again  */
