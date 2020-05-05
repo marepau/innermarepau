@@ -170,7 +170,7 @@ function ContactForm(){
   return(
     <PageContainer>
     <LeftFadeDiv>
-      <Title>Let's Talk</Title>
+      <Title>'sup?</Title>
     </LeftFadeDiv>
     <br/>
     <FadeDiv>

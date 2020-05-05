@@ -37,9 +37,8 @@ const ProjectsContainer = styled.div`
 
 const IndvProject = styled.div`
   width: 100%;
+  max-height: 85vh;
   height: 85vh;
-  margin: 0px;
-  max-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

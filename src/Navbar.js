@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 const Nav = styled.div`
   background-color: rgba(0, 0, 0, 0);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
+  // position: -webkit-sticky;
+  // position: sticky;
+  height: 15vh;
   `;
 
 const MenuLink = styled.a`
@@ -24,8 +24,9 @@ const HomeLink = styled.a`
 const NavHeader = styled.div`
   padding: 20 px 20 px;
   width: 100%;
-  height: 15vh;
+  height: auto;
   display: flex;
+  position: fixed;
   align-items: center;
   `;
 

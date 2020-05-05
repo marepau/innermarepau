@@ -3,77 +3,98 @@ import styled from 'styled-components'
 import albers from './assets/albers.jpg'
 import chairOne from './assets/chair_rock.png'
 import chairTwo from './assets/chair_snow.png'
-
-const ProjectsContainer = styled.div`
-  // background-image: url(${albers});
-  width: 100%;
-  min-height: 85vh;
-  display: flex;
-  position: relative;
-  z-index: -1;
-`;
+import longshot from './assets/longshotchair.jpg'
+import insitu from './assets/insituchair.png'
+import prog from './assets/midprochair.jpg'
+import before from './assets/beforechair.jpg'
+import detail from './assets/detail.jpg'
 
 
 const IndvProject = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  position:relative;
+  align-items: center;
+  z-index: -1;
   `;
 
-const ProjectImages = styled.div`
-  width: 45%;
-  height: auto;
-  position: static;
+const ProjImages = styled.div`
+  top: 0px;
   display: flex;
   justify-content: flex-end;
 `;
 
+const LeftLayout = styled.div`
+  width: 47%;
+  height: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+`;
+
 const ImageWrapper = styled.div`
   width: auto;
-  height: auto;
   display:flex;
-  position: relative;
   align-content: flex-start;
-  padding: 6px;
+  padding: 3px;
 `;
 
 const Image = styled.img`
   max-width: 100%;
-  height: auto
+  border: 1px solid grey;
 `;
 
-const ProjectText = styled.div`
-  width: 45%;
+const RightLayout = styled.div`
+  width: 47%;
+  display: flex;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+`;
+
+const SimpleHSection = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const SimpleVSection = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  justify-content: space-between;
 `;
 
 const ProjectTitle = styled.div`
-  align-text: left;
+  align-self: center;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 `;
 
 const ProjectDescription = styled.div`
-  align-text: left;
+  align-self: center;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 `;
 
 
 function Fiber(){
   return(
-    <ProjectsContainer>
+    // <ProjectsContainer>
       <IndvProject>
-        <ProjectImages>
+        <LeftLayout>
+          <ProjImages>
           <ImageWrapper>
             <Image src={chairTwo}/>
           </ImageWrapper>
           <ImageWrapper>
             <Image src={chairOne}/>
           </ImageWrapper>
-        </ProjectImages>
-        <ProjectText>
+          </ProjImages>
           <ProjectTitle>
             Pine Hill Chair
           </ProjectTitle>
@@ -81,9 +102,30 @@ function Fiber(){
             Wood, Nylon.
             2020
           </ProjectDescription>
-        </ProjectText>
+        </LeftLayout>
+        <RightLayout>
+          <ImageWrapper>
+            <Image src={longshot}/>
+          </ImageWrapper>
+          <SimpleHSection>
+            <SimpleVSection>
+              <ImageWrapper>
+               <Image src={before} width="225px"/>
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image src={prog} width="300px"/>
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image src={detail} width="300px"/>
+              </ImageWrapper>
+            </SimpleVSection>
+            <ImageWrapper>
+              <Image src={insitu} width="100%"/>
+            </ImageWrapper>
+          </SimpleHSection>
+        </RightLayout>
       </IndvProject>
-    </ProjectsContainer>
+    // </ProjectsContainer>
   )
 }
 
